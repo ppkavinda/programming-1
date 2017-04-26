@@ -1,8 +1,20 @@
-def recursion(n:Int, m:Int):Unit = {
-	println(n)
-	if(n<m){
-		recursion(n + 1, m)
-	}
+for(i <- 0 to 5; j <- 0 to 5){
+    if(i == j){
+        print(" ")
+    }else{
+        print("*")
+    }
+    if(j == 5){
+        println()
+    }
 }
-recursion(5, 10)
 
+for(i <- 1 to 4){
+    println(" " * 8 + "*")
+    if(i == 4){
+        for(j <- 1 to 5){
+            print("* ")
+        }
+    }
+}
+println()
