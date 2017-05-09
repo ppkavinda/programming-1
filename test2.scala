@@ -1,9 +1,32 @@
-var n1 = 23.0
-var sum = 0.0
+def charOrder(sample:String, txt:String) = {
+    var text = txt
+    var ans:Boolean = true
 
-while(n1 > 0){
-    var n2 = n1 % 10
-    sum += math.pow(n2, 2)
-    n1 = (n1 - n2) / 10
-    println(n1, sum)
+    for(sl <- sample){
+        if(ans == true){
+            var i = 0
+            var j = 0
+            var t = text(0)
+            while(t != sl){
+                t = text(i)
+                println(sl.toString + t + " E")
+                if(t == sl){
+                    text = text.substring(i+1, text.length())
+                    j = 0
+                }
+                if(text.length() ==  j){
+                    ans = false
+                }
+                println(ans + text.length().toString + i.toString + " D")
+                j += 1
+                i += 1
+            }
+        }else{
+            print("Not Match")
+        }
+    }
+    if(ans == true){
+        print("Match !!")
+    }
 }
+charOrder("C", "abC")
