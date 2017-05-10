@@ -15,4 +15,4 @@ def lucky(n:Double):Unit = {
     }
     // println(n, sum)
 }
-lucky(23)
+lucky(27)
