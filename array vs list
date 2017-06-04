@@ -1,0 +1,40 @@
+array -------
+    mutable
+    fixed length
+    values must be of same data type: homogenous
+    hence mutable, elements can be change; but not the type
+
+
+    val a = Array(1, 2, 3, 4)
+    val a = new Array[String](10)           // 10 null elements [null, null, null, ...]
+    val a = new Array[Int](10)              // 10 zeros [0,0,0,0,0,0,0,0,0,0]
+    val a = new Array[Array[Int]](10)       // 10 empty arrays
+
+    val a = new Array[Array[Int]](10)
+    a(0) = Array(1, 2, 3, 4, 3)
+    print(a(0)(2)) //  3
+
+    array methods --
+    a.indexOf(3) // 2
+    a.indexOf(10) // -1
+    a.lastIndexOf(3) // 4
+    a.mkString(",") // "1,2,3,4,3"
+    in python ---> print(1, 2, 3, 4, 5, sep=",")   // 1,2,3,4,5
+
+    val s = "This is a line"
+    line.split(" ") // Array("This", "is", "a", "line")
+
+list -------
+    immutable
+    homogeneous
+
+    val l = List(23, 67, 29, 34)
+    val l = List"("saman", "kamal")
+    val l = List( ("saman", 22), ("gamani", 10) ) // list of tuples
+    val l:List[List(Int)] = List(List(1, 2), List(1), List())
+    val l = 23::(67::(32::Nil))) // or var l (23::(67::(32::Nil))) or val l = List(23, 67, 32)
+
+    list methods --
+    l.head = 23
+    l.tail = List(67, 89, 32)
+    

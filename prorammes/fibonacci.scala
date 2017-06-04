@@ -6,4 +6,24 @@ def fibonacci(n:Int):Int = {
     }
 }
 
-println(fibonacci(50))
+println(fibonacci(20))
+
+def seviesf(n:Int){
+    if(n!=1) servicesf(n-1)
+    println(fibonacci(n))
+}
+
+def fi(num:Int)= {
+    var i = 0
+    var pre = 0
+    var ans = 1
+    while(i < num){
+
+        println(ans)
+        i = ans
+        ans = ans + pre
+        pre = i
+        i = ans
+    }
+}
+fi(50)
